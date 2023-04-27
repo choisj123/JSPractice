@@ -1,7 +1,7 @@
 // 1. use strict
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 let globalName = 'global name';
 console.log(globalName);
 {
@@ -33,15 +33,16 @@ console.log(age);
 // name = 4;
 // let name;
 
-// 3. Constant, r(read only)
+// 3. Constant, r(read only) 자물쇠!!
 // use const whenever possible.
+// 변수의 값이 계속 바껴야될 좋은 이유가 없다면 웬만해선 const 사용이 바람직!
 // only use let if variable needs to change.
 const daysInWeek = 7;
 const maxNumber = 5;
 
 // Note!
-// Immutable data types: premitive types, frozen objects (i.e. object.freeze())
-// Mutable data types: all objects by default are mutable in JS
+// Immutable(불변) data types: premitive types, frozen objects (i.e. object.freeze())
+// Mutable data types(변경할 수 있는 데이터): all objects by default are mutable in JS -> array
 // favor immutable data type always for a few reasons:
 //  - security
 //  - thread safety

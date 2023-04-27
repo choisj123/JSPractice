@@ -113,7 +113,10 @@ console.log(`value : ${symbol1.description}, type : ${typeof symbol1}`);
 
 // object, real-life object, data structure
 const ellie = { name: 'ellie', age: 20 };
+console.log(`value: ${ellie}, type: ${typeof ellie}`);
+console.log(`value: ${ellie.age}, type: ${typeof ellie.age}`);
 ellie.age = 21;
+console.log(`value: ${ellie.age}, type: ${typeof ellie.age}`);
 
 // 5. Dynamic typing: dynamically typed language
 // 변수를 선언할 때 어떤 타입인지 선언하지않고 런타임, 프로그램이 동작할 때 
@@ -127,5 +130,5 @@ text = '7' + 5;
 console.log(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2';
 console.log(`value: ${text}, type: ${typeof text}`);
-console.log(text.charAt(0)); // 에러
+//console.log(text.charAt(0)); // 에러
 // => TypeScript가 나온 배경!!! Javascript 위에 type이 올라간 느낌!

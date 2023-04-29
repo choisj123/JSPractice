@@ -182,4 +182,5 @@ for (let i = 0; i < 11; i++) {
     break;
   }
   console.log(`q2. ${i}`);
+  console.log(`q2. ${i}`);
 }

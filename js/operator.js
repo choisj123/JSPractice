@@ -19,15 +19,18 @@ let counter = 2;
 const preIncrement = ++counter;
 // counter = counter + 1;
 // preIncrement = counter;
-console.log(`preIncrement: ${preIncrement}, counter: ${counter}`);
+console.log(`preIncrement: ${preIncrement}, counter: ${counter}`);// 3 3
+
 const postIncrement = counter++;
 // postIncrement = counter;
 // counter = counter + 1;
-console.log(`postIncrement: ${postIncrement}, counter: ${counter}`);
+console.log(`postIncrement: ${postIncrement}, counter: ${counter}`); // 3 4
+
 const preDecrement = --counter;
-console.log(`preDecrement: ${preDecrement}, counter: ${counter}`);
+console.log(`preDecrement: ${preDecrement}, counter: ${counter}`); // 3 3
+
 const postDecrement = counter--;
-console.log(`postDecrement: ${postDecrement}, counter: ${counter}`);
+console.log(`postDecrement: ${postDecrement}, counter: ${counter}`); // 3 2
 
 // 4. Assignment operators
 let x = 3;
@@ -58,9 +61,10 @@ console.log(`and: ${value1 && value2 && check()}`);
 
 // often used to compress long if-statement
 // nullableObject && nullableObject.something
-if(nullableObject != null){
-    nullableObject.something;
-}
+
+// if(nullableObject != null){
+//     nullableObject.something;
+// }
 
 function check() {
   for (let i = 0; i < 10; i++) {
@@ -74,32 +78,34 @@ function check() {
 console.log(!value1);
 
 // 7. Equality
+console.log("7.Equality");
 const stringFive = '5';
 const numberFive = 5;
 
 // == loose equality, with type conversion
-console.log(stringFive == numberFive);
-console.log(stringFive != numberFive);
+console.log(stringFive == numberFive); // true
+console.log(stringFive != numberFive); // false
 
 // === strict equality, no type conversion
-console.log(stringFive === numberFive);
-console.log(stringFive !== numberFive);
+console.log(stringFive === numberFive); // false
+console.log(stringFive !== numberFive); // true
 
 // object equality by reference
 const ellie1 = { name: 'ellie' };
 const ellie2 = { name: 'ellie' };
 const ellie3 = ellie1;
-console.log(ellie1 == ellie2);
-console.log(ellie1 === ellie2);
-console.log(ellie1 === ellie3);
+console.log(ellie1 == ellie2); // false
+console.log(ellie1 === ellie2); // flase
+console.log(ellie1 === ellie3); // true
 
 // equality - puzzler
-console.log(0 == false);
-console.log(0 === false);
-console.log('' == false);
-console.log('' === false);
-console.log(null == undefined);
-console.log(null === undefined);
+console.log(0 == false); // true 
+console.log(0 === false); // false
+console.log('' == false); // true
+console.log('' === false); // false
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+console.log(typeof null);
 
 // 8. Conditional operators: if
 // if, else if, else
@@ -161,8 +167,8 @@ for (let i = 3; i > 0; i = i - 2) {
 }
 
 // nested loops
-for (let i = 0; i < 10; i++) {
-  for (let j = 0; j < 10; j++) {
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
     console.log(`i: ${i}, j:${j}`);
   }
 }
@@ -170,7 +176,7 @@ for (let i = 0; i < 10; i++) {
 // break, continue
 // Q1. iterate from 0 to 10 and print only even numbers (use continue)
 for (let i = 0; i < 11; i++) {
-  if (i % 2 === 0) {
+  if (i % 2 !== 0) {
     continue;
   }
   console.log(`q1. ${i}`);
@@ -181,6 +187,5 @@ for (let i = 0; i < 11; i++) {
   if (i > 8) {
     break;
   }
-  console.log(`q2. ${i}`);
   console.log(`q2. ${i}`);
 }

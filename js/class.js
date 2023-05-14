@@ -13,12 +13,13 @@ class Person {
     // fields
     this.name = name;
     this.age = age;
+    if();djj
   }
 
   // methods
   speak() {
     console.log(`${this.name}: hello!`);
-  }
+  } 
 }
 
 const ellie = new Person('ellie', 20);

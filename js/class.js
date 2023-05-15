@@ -1,7 +1,7 @@
 'use strict';
-// Object-oriendted programming
-// class: template
-// object: instance of a class
+// Object-oriendted programming 객체지향 프로그래밍
+// class: template 틀 -> 선언만(실제 데이터 x)
+// object: instance of a class 
 // JavaScript classes
 //  - introduced in ES6
 //  - syntactical sugar over prototype-based inheritance 
@@ -13,10 +13,9 @@ class Person {
     // fields
     this.name = name;
     this.age = age;
-    if();djj
   }
 
-  // methods
+  // methods 행동
   speak() {
     console.log(`${this.name}: hello!`);
   } 
@@ -76,8 +75,11 @@ class Article {
 
 const article1 = new Article(1);
 const article2 = new Article(2);
+console.log(article1.publisher); // undefined -> static 때문!
 console.log(Article.publisher);
+// article1.printPublisher(); // error
 Article.printPublisher();
+
 
 // 5. Inheritance
 // a way for one class to extend another class.

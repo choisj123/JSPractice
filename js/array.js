@@ -44,11 +44,11 @@ fruits.pop();
 console.log(fruits);
 console.log(poped);
 
-// unshift: add an item to the benigging
+// unshift: add an item to the beginning
 fruits.unshift('🍓', '🍋');
 console.log(fruits);
 
-// shift: remove an item from the benigging
+// shift: remove an item from the beginning
 fruits.shift();
 fruits.shift();
 console.log(fruits);
@@ -87,3 +87,12 @@ console.log(fruits);
 console.log(fruits.indexOf('🍎')); // 0 : 첫번째 해당값만 반환
 console.log(fruits.lastIndexOf('🍎')); // 6 : 마지막 해당값만 반환
 
+console.log(fruits.toString());
+
+fruits.push(1,2,3);
+console.log(fruits.toString());
+console.log(fruits.toLocaleString());
+
+const arr = [1,2,3,4,5];
+console.log(arr);
+console.log(arr.reverse());

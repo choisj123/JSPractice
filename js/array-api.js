@@ -88,24 +88,60 @@
   
   // Q7. make an array containing only the students' scores
   // result should be: [45, 80, 90, 66, 88]
+  // map은 기존 배열에서 함수를 거쳐서 새로운 배열로 변환해서 저장 
   {
-    
+    const result = students.map((student)=> student.score);
+    console.log(result);
   }
   
   // Q8. check if there is a student with the score lower than 50
   {
+    const some = students.some((student)=>student.score < 50);
+    console.log(some); // true
+
+    const every = students.some((student)=>student.score < 50);
+    console.log(every); // false
+
+    const result = students.find((student)=>student.score < 50);
+    console.log(result);
+    
   }
   
+  console.clear();
   // Q9. compute students' average score
+  // reduce() : 원하는 시작점부터 모든 배열을 돌면서 어떤 값을 누적할 때 사용
+  // reduceRight() : 배열을 거꾸로 돌면서 값을 누적할 때 사용
   {
+    const result = students.reduce((prev, curr) => {
+        console.log("-----------");
+        console.log(prev)
+        console.log(curr);
+        return prev + curr.score;
+    }, 0 )
+
+    const reduce = students.reduce((prev, curr) => prev + curr.score, 0 )
+    console.log("총합 : " , reduce);
+    console.log("평균 : " , reduce / students.length);
+
   }
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
+    const result = students
+    .map((student) => student.score)
+    .filter((score) => score >= 50)
+    .join();
+    console.log(result);
+    // console.log(result.toString());
   }
   
   // Bonus! do Q10 sorted in ascending order
   // result should be: '45, 66, 80, 88, 90'
   {
+    const result = students
+    .map(student => student.score)
+    .sort((a,b) => a - b)
+    .join()
+    console.log(result);
   }

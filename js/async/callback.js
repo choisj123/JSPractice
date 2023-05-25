@@ -53,6 +53,7 @@ class UserStorage {
 const userStorage = new UserStorage();
 const id = prompt('enter your id');
 const password = prompt('enter your passrod');
+
 userStorage.loginUser(
   id,
   password,

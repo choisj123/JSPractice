@@ -9,7 +9,6 @@
 // - used for serialization(직렬화) and transmission(전송) of data between the network the network connection
 // - independent programming language and platform 언어, 플랫폼 상관없이 사용가능
 
-
 // 1. Object to JSON
 // stringify(obj) : object를 JSON으로 
 let json = JSON.stringify(true);
